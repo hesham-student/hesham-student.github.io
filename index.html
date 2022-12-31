@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Project</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <main>
+      <div class="form-holder">
+         <form id="formInfo" action="">
+            <label for="username">اسم المستخدم</label>
+            <input type="text" name="username" id="username" required />
+            <label for="name">سم الطالب</label>
+            <input type="text" name="name" id="name" />
+            <label for="dateOfBirth">تاريخ الولادة:</label>
+            <input type="text" name="dateOfBirth" id="dateOfBirth" />
+            <label for="program">البرنامج</label>
+            <select name="program" id="program">
+               <option value=""></option>
+               <option value="BIT">BIT</option>
+               <option value="TIC">TIC</option>
+            </select>
+            <label for="phone">رقم الموبايل</label>
+            <input type="text" name="phone" id="phone" value="" />
+            <label for="caption">ادخل الرمز للتحقق: <span id="capGen"></span></label>
+            <input type="text" name="caption" id="caption">
+            <input type="button"  value="Singup" id="submit" >
+         </form>
+      </div>
+      <div class="display-result">
+         <div class="filtering">
+            <h4>الفلترة حسب البرنامج الدراسي</h4>
+            <select name="" id="progFilter">
+               <option value="all">All</option>
+               <option value="BIT">BIT</option>
+               <option value="TIC">TIC</option>
+            </select>
+            <h4> يمكن الفرز حسب:</h4>
+            <select name="" id="studentSort">
+               <option value=""></option>
+               <option value="username">رقم الطالب</option>
+               <option value="name">اسم الطالب</option>
+               <option value="program">البرنامج</option>
+            </select>
+         </div>
+         <div class="table-holder">
+            <table id="table">
+            </table>
+         </div>
+         <div class="jsonData">
+            <button id="convertJson">Convert to JSON</button>
+            <div id="jsonResult">result</div>
+         </div>
+      </div>
+   </main>
+
+   <script src="script.js"></script>
+</body>
+
+</html>
